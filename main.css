@@ -4,97 +4,114 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-
 body {
-  font-family:'Lato', sans-serif;
-  line-height: 1.6;
-  background-color: #df8f9c;
-  color: #660005;
-  text-align: center;
-  padding: 20px;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #F8F5F7;
+  color: #670626;
 }
 
 .perfil {
-  display: flex;           /* ativa o flexbox */
-  align-items: center;     /* alinha verticalmente imagem e texto */
-  gap: 20px;               /* espaço entre a imagem e o texto */
-  justify-content: center; /* centraliza o conjunto na tela */
-  margin-bottom: 30px;     
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;
+  background: linear-gradient(135deg, #D16D82, #8C2F39);
+
+}.perfil {
+  color: #F8F5F7;
 }
 
-.foto-perfil {
-  width: 250px;       
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;  
+
+.perfil h1{
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
   margin-bottom: 20px;
 }
-.infos h1 {
-  margin: 0;
-  font-size: 2.0em;
+
+.icon {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #F8F5F7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #F8F5F7;
+  font-weight: bold;
+  transition: 0.3s;
+
+}
+.icon {
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
 }
 
-.infos p {
-  margin: 5px 0 0 0;
-  color: #660005;
-  font-size: 1.1em;
+.icon:hover {
+  background-color: #F8F5F7;
+  color: #e5869b;
+}
+
+ .sobre-mim {
+  padding: 80px 20px;
+}
+.sobre-mim p{
+  font-size: 20px;
+  
+}
+
+.sobre-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: auto;
 }
 
 
-.sobre-mim {
-  background-color: #faf4d4;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.sobre-mim h2 {
-  margin-bottom: 10px;
-  color: #660005;
-}
-
-.sobre-mim p {
-  font-size: 1em;
-  color: #660005;
+.foto-perfil {
+  width: 280px;
+  border-radius: 50%;
+  margin: 20px 0;
 }
 .habilidades{
-    background-color: #faf4d4;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}  
-
-
-.habilidades h2{
-    margin-bottom: 5px;
-    color:#660005
-
+  text-align: center;
+  margin-bottom: 20px;
 }
-ul{
-  text-align: left;   
-  max-width: 400px;   
-  margin: 20px auto;  
-  padding-left: 20px; 
-  }
 
-ul.horizontal {
+.skills {
   display: flex;
-  gap: 20px; 
-  list-style: none; 
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-li {
-  margin-bottom: 5px; 
-  font-size: 1.1em;    
-  color: #660005;    
-
+.skill-card {
+  background: #e5869b;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-weight: bold;
+  transition: 0.3s;
 }
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+.skill-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
